@@ -1,0 +1,34 @@
+{
+  "name": "translations-checker",
+  "version": "1.0.0",
+  "description": "Helps you know which translations are missing",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "ignasave",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.4.8",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "js-yaml": "^4.1.0",
+    "path": "^0.12.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ignasave/translations-checker.git"
+  },
+  "keywords": [
+    "translations",
+    "check",
+    "yaml",
+    "keys"
+  ],
+  "bugs": {
+    "url": "https://github.com/ignasave/translations-checker/issues"
+  },
+  "homepage": "https://github.com/ignasave/translations-checker#readme"
+}
