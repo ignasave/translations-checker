@@ -3,13 +3,13 @@ import * as path from "path";
 import * as yaml from "js-yaml";
 
 var args = process.argv;
-("../app/common/assets/strings");
-("../app/common/assets/strings/translations/es.yaml");
+
 // Define the path to the directory containing the YAML files
-const yamlDir = args[2];
+const yamlDir = args[2] || "../app/common/assets/strings";
 
 // Define the path to the translation file
-const translationFile = args[3];
+const translationFile =
+  args[3] || "../app/common/assets/strings/translations/es.yaml";
 
 // Load the translation file
 const translationData = yaml.load(fs.readFileSync(translationFile, "utf8"));

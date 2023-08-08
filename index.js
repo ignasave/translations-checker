@@ -4,12 +4,10 @@ var fs = require("fs");
 var path = require("path");
 var yaml = require("js-yaml");
 var args = process.argv;
-("../app/common/assets/strings");
-("../app/common/assets/strings/translations/es.yaml");
 // Define the path to the directory containing the YAML files
-var yamlDir = args[2];
+var yamlDir = args[2] || "../app/common/assets/strings";
 // Define the path to the translation file
-var translationFile = args[3];
+var translationFile = args[3] || "../app/common/assets/strings/translations/es.yaml";
 // Load the translation file
 var translationData = yaml.load(fs.readFileSync(translationFile, "utf8"));
 var anyErrors = false;
