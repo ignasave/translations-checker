@@ -37,3 +37,6 @@ fs.readdirSync(yamlDir).forEach(function (filename) {
 if (anyErrors) {
     process.exit(1);
 }
+else {
+    console.log("All keys translated!");
+}

@@ -1,5 +1,5 @@
 {
-  "name": "translations-checker",
+  "name": "@ignasave/translations-checker",
   "version": "1.0.0",
   "description": "Helps you know which translations are missing",
   "main": "index.js",
@@ -30,5 +30,8 @@
   "bugs": {
     "url": "https://github.com/ignasave/translations-checker/issues"
   },
-  "homepage": "https://github.com/ignasave/translations-checker#readme"
+  "homepage": "https://github.com/ignasave/translations-checker#readme",
+  "directories": {
+    "test": "test"
+  }
 }
