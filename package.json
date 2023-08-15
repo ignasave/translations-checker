@@ -1,10 +1,14 @@
 {
   "name": "@ignasave/translations-checker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Helps you know which translations are missing",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "clean-build": "npm run clean && npm run build",
+    "clean": "rm -rf index.js",
+    "test": "test",
+    "build": "npx tsc index.ts",
+    "prepublishOnly": "npm run clean-build"
   },
   "author": "ignasave",
   "license": "MIT",

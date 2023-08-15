@@ -4,12 +4,15 @@ import * as yaml from "js-yaml";
 
 var args = process.argv;
 
+// Define the language
+const language = args[2] || "es";
+
 // Define the path to the directory containing the YAML files
-const yamlDir = args[2] || "../app/common/assets/strings";
+const yamlDir = args[3] || "../app/common/assets/strings";
 
 // Define the path to the translation file
 const translationFile =
-  args[3] || "../app/common/assets/strings/translations/es.yaml";
+  args[4] || `../app/common/assets/strings/translations/${language}.yaml`;
 
 // Load the translation file
 const translationData = yaml.load(fs.readFileSync(translationFile, "utf8"));
@@ -39,7 +42,7 @@ fs.readdirSync(yamlDir).forEach((filename) => {
 
       if (isTypeCounted) {
         const allCountedValuesAreTranslated = Object.values(entry.values).every(
-          (e: any) => e.hasOwnProperty("es")
+          (e: any) => e.hasOwnProperty(language)
         );
         if (!allCountedValuesAreTranslated) {
           console.error(
